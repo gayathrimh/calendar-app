@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.days-container{
+  width:100%;
+  display:flex;
+}
+.days-container span{
+  width:calc(100% /7);
+  text-transform:uppercase;
+  font-weight:bold;
+  display:flex;
+  margin:10px 0px 10px 0px;
+  align-items:center;
+  justify-content:center;
+}
+.dates-container{
+  width:100%;
+  display:flex;
+flex-wrap:wrap;
+}
+.dates-container span{
+  width:calc(100% /7);
+  display:flex;
+  justify-content:center;
+  margin:10px 0px 10px 0px;
+  align-items:center;
+}
+div i{
+  padding:10px 20px;
+  font-size:15px;
+  gap:10px;
+  cursor:pointer;
+  margin:10px;
+  font-weight:bold;
+}
