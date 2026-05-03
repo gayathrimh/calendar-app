@@ -10,7 +10,7 @@ export default function Page1(){
    const currentDate=new Date();
    const [currentMonth,setCurrentMonth]=useState(currentDate.getMonth());
    const [currentYear,setCurrentYear]=useState(currentDate.getFullYear());
-   const datesOfMonth=new Date(currentYear,currentMonth,0).getDate();
+   const daysInMonth=new Date(currentYear,currentMonth+1,0).getDate();
    const firstDayInMonth=new Date(currentYear,currentMonth,1).getDay();
 
    function displayDaysOfWeek(){
@@ -28,9 +28,9 @@ export default function Page1(){
     }
     return emptySpaces;
    }
-   function DisplaydatesInMonth(){
+   function displaydatesInMonth(){
     let Dates=[];
-    for(let i=1;i<datesOfMonth;i++){
+    for(let i=1;i<daysInMonth;i++){
         Dates.push(<span key={"Dates"+i}>{i}</span>)
     }
     return Dates;
@@ -124,7 +124,7 @@ export default function Page1(){
 
         <div className='dates-container'>
         {emptySpace()}
-        {DisplaydatesInMonth()}
+        {displaydatesInMonth()}
             </div>
         </div>
     );
